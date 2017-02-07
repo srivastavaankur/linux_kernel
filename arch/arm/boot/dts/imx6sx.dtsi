@@ -40,13 +40,12 @@
 		serial4 = &uart5;
 		serial5 = &uart6;
 		spi0 = &ecspi1;
-		//spi1 = &ecspi2;
+		spi1 = &ecspi2;
 		spi2 = &ecspi3;
 		spi3 = &ecspi4;
 		spi4 = &ecspi5;
 		usbphy0 = &usbphy1;
 		usbphy1 = &usbphy2;
-		bal = &nxpbal;
 	};
 
 	cpus {
@@ -307,21 +306,6 @@
 					status = "disabled";
 				};
 
-
-				nxpbal: ecspi@0200c000 {
-					#address-cells = <1>;
-					#size-cells = <0>;
-					compatible = "nxp,bal";
-					reg = <0x0200c000 0x4000>;
-					interrupts = <GIC_SPI 32 IRQ_TYPE_LEVEL_HIGH>;
-					clocks = <&clks IMX6SX_CLK_ECSPI2>,
-						 <&clks IMX6SX_CLK_ECSPI2>;
-					clock-names = "ipg", "per";
-					dmas = <&sdma 5 7 1>, <&sdma 4 7 2>;
-					dma-names = "rx", "tx";
-					status = "okay";
-				};
-/*
 				ecspi2: ecspi@0200c000 {
 					#address-cells = <1>;
 					#size-cells = <0>;
@@ -335,7 +319,7 @@
 					dma-names = "rx", "tx";
 					status = "disabled";
 				};
-*/
+
 				ecspi3: ecspi@02010000 {
 					#address-cells = <1>;
 					#size-cells = <0>;
