@@ -220,6 +220,7 @@ dtb-$(CONFIG_ARCH_MXC) += \
 	imx6sx-udoo-neo-extended-lvds7.dtb \
 	imx6sx-udoo-neo-extended-lvds7-m4.dtb \
 	imx6sx-udoo-neo-extended-m4.dtb \
+	imx6sx-udoo-neo-externalpins.dtb \
 	imx6sx-udoo-neo-full.dtb \
 	imx6sx-udoo-neo-full-hdmi.dtb \
 	imx6sx-udoo-neo-full-hdmi-m4.dtb \
